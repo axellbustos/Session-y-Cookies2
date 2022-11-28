@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+    
+</head>
+<% if (locals.user && user.color) { %> 
+  <%- include('./partials/classBody') %> 
+  <% }else { %>
+  <body class="body__index">
+  <% } %>
+   <% if (locals.user) { %>
+    <p>
+      Hola <%= locals.user.name %> , elegiste el color: <%=locals.user.color %>
+      , tu email es: <%= locals.user.email %> y tu edad es: <%= locals.user.age
+      %> anios
+    </p>
+
+    <a class="buttons--btns" href="/salida">Continuar</a>
+    <% } %>
+    
+</body>
+</html>

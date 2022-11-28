@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I” crossorigin=”anonymous”>
+  </head>
+  <% if (locals.user && user.color) { %> 
+  <%- include('./partials/classBody') %> 
+  <% }else { %>
+  <body class="body__index">
+  <% } %>
+    <div class="box">
+      <form class="form" action="" method="post">
+        <div class="form-box">
+          <label for="name">Ingrese su nombre</label>
+          <input
+            type="text"
+            name="name"
+            value="<%= locals.old ? old.name : null %>"
+          />
+          <small class="error-validation"
+            ><%= locals.errors && errors.name ? errors.name.msg : null %></small
+          >
+        </div>
+
+        <div class="form-box">
+          <label for="color">Elija un color de fondo</label>
+          <select name="color" id="color">
+            <option value="" selected hidden>Seleccione un color</option>
+            <option value="amarillo">Amarillo</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="rojo">Rojo</option>
+            <option value="naranja">Naranja</option>
+          </select>
+          <small class="error-validation"
+            ><%= locals.errors && errors.color ? errors.color.msg : null
+            %></small
+          >
+        </div>
+
+        <div class="form-box">
+          <label for="email">Ingrese su email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value="<%= locals.old ? old.email : null %>"
+          />
+          <small class="error-validation"
+            ><%= locals.errors && errors.email ? errors.email.msg : null %>
+          </small>
+        </div>
+        <div class="form-box">
+          <label for="age">Ingrese su edad</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            value="<%= locals.old ? old.age : null %>"
+          />
+          <small class="error-validation"
+            ><%= locals.errors && errors.age ? errors.age.msg : null %></small
+          >
+        </div>
+        <div class="form-box">
+          <label for="remember">Recordar color</label>
+          <input type="checkbox" name="remember" />
+        </div>
+
+        <a href="/delete" class="">Olvidar color</a>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>

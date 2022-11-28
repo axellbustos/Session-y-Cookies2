@@ -1,0 +1,14 @@
+<% switch(locals.user.color){
+    case "rojo" :%> <body class="body__index--red">
+    <%break%>
+    <%case "naranja" : %><body class="body__index--orange"> 
+    <%break%>
+    <%case "amarillo" : %><body class="body__index--yellow"> 
+    <%break%>
+    <%case "verde" : %><body class="body__index--green"> 
+    <%break%>
+    <%case "azul" : %><body class="body__index--blue"> 
+    <%break%>
+
+    <%default : %><body class="body__index"> 
+<%}%>

@@ -1,0 +1,56 @@
+/** BODY */
+
+.body__index { 
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/** COLORS */
+
+.body__index--red {
+    width: 100vw;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.body__index--orange {
+    width: 100vw;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.body__index--yellow {
+    width: 100vw;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.body__index--green {
+    width: 100vw;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.body__index--blue {
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.title{
+    text-align: center;
+}
+.box{
+    width: 50%;
+}
