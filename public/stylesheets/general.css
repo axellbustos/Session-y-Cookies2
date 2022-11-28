@@ -5,7 +5,9 @@ body {
 
 a {
   color: #00B7FF;
+  
 }
+
 .box{
   display: flex;
   justify-content: center;
